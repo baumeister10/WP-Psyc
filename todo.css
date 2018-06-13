@@ -1,0 +1,31 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+legend {
+    font-weight: bold;
+}
+div.tableContainer {
+    display: table;
+    border-spacing: 5px;
+}
+div.tableRow {
+    display: table-row;
+}
+div.tableRow label {
+    display: table-cell;
+    text-align: right;
+}
+div.tableRow input {
+    display: table-cell;
+} 
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.reader-container {
+  max-width: 100%;
+  margin: auto;
+} 

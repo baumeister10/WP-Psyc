@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset= "utf-8">
+<title>Webprojekt Richter/Hirschfeld</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">  
+<link rel="stylesheet" href="todo.css">   
+</head>
+    
+    
+<body>
+    <div class='wrapper' id="rss">
+    <div class='rss-reader-wrapper'>
+      <div class='reader-container'>
+        <script type="text/javascript">
+          document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');
+        </script>
+        <script type="text/javascript">
+          (function() {var params = {rssmikle_url: "https://www.psyndex.de/products/com/pylastupdate.php?type=rss",rssmikle_frame_width: "800",rssmikle_frame_height: "72",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "on",responsive: "on",rssmikle_css_url: "",text_align: "left",text_align2: "left",corner: "off",scrollbar: "on",autoscroll: "on",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "New",rssmikle_title: "on",rssmikle_title_sentence: "Neuigkeiten im Bereich Psychologie",rssmikle_title_bgcolor: "#BC1906",rssmikle_title_color: "#FFFFFF",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#BC1906",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "off",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M:%S %p",item_description_style: "text",item_thumbnail: "full",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();
+        </script>
+      </div>
+    </div>
+  </div>
+    <br>
+
+<div class="container">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+         
+        
+        <div class="card" id='intro'>
+            <div class="card-header">Big 5 - Persönlichkeitstest</div>
+            <div class="card-block">
+                <h3>Hallo und herzlich willkommen!</h3>
+               <p>Bei den folgenden Aussagen geht es darum, wie Sie sich selbst in verschiedenen Situationen erleben. Ihre Aufgabe ist es anzugeben, inwieweit Sie jeder Aussage zustimmen, indem Sie auf einer Skala von eins bis fünf eine Zahl auswählen und anklicken. Dabei bedeutet 1 starke Ablehnung, 5 starke Zustimmung, und 2, 3 und 4 die Abstufungen dazwischen.</p>
+                
+                <ol>
+                    <li>Sehr unzutreffend</li>
+                    <li>Unzutreffend</li>
+                    <li>Weder zutreffend noch unzutreffend</li>
+                    <li>Zutreffend</li>
+                    <li>Sehr zutreffend</li>                
+                </ol>
+                
+                <p>Es gibt keine richtigen oder falschen Antworten, also wählen Sie jeweils die Ausprägung, die Sie selbst bei jeder Aussage am besten charakterisiert. Lassen Sie sich ruhig Zeit und bedenken Sie jede Aussage genau. Wenn Sie alle Fragen ausgefüllt haben, klicken Sie ganz unten auf Abschicken.</p>
+
+                <br />
+                
+                <button class="button btn btn-default" type="submit" id="starten" onclick='weiter()'>Fragebogen starten</button>
+                
+                <br />
+                <br />
+            </div>
+        </div>        
+        <div class="card" id="demograf">
+            <div class="card-header">Persönliche Daten</div>
+            <div class="card-block">
+               
+                <table id="demografie">
+                    <tr>
+                        <td>
+                            Geschlecht:
+                            <br />
+                             <div class="btn-group" data-toggle="buttons" id="genders">
+                            <label class="btn btn-secondary">
+                                <input type="radio" autocomplete="off"  value="0" name="gender"/> Männlich
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" autocomplete="off" value="1" name="gender"/> Weiblich
+                            </label></div>
+                        </td>
+                        <td>
+                          Alter:
+                            <br />
+                            <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-secondary" id='age'>
+                            <input id="Alter" type="number" min="10" max="110">
+                            </label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br />
+                <br />
+
+            </div>
+        </div>
+
+        <div class="card " id="extraversion">
+            <div class="card-header">Extraversion</div>
+            <div class="card-block">
+               <div> 
+                  <span><p class="beschreibung">Extraversion bezeichnet die Stärke der Tendenz der Zuwendung nach außen. Extravertierte Menschen neigen dazu, soziale Kontakte zu knüpfen, sie reden mehr und gehen mehr aus sich heraus, was für bestimmte soziale Rollen – in Verkauf, Politik, Künsten und Sozialwissenschaften – wichtig ist.</p></span>   
+                  <hr>
+                   
+                   <table>
+                        <tr>
+                           <td></td>
+                           <td><img src="nein.png" alt="" class="nein"> <img src="ja.png" alt="" class="ja"></td>
+                        </tr>  
+                           
+                        <tr>   
+                           <td class="item">1. Ich habe gerne viele Leute um mich herum.</td>
+                           <td>
+                               <div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="e1">
+                               </div>
+                           </td>
+                       </tr>
+                       
+                       <tr>
+                           <td class="item">2. Ich bin leicht zum Lachen zu bringen.</td>
+                           <td>
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="e2">
+                                </div>
+                           </td>
+                       </tr>
+                       
+                       <tr>
+                           <td class="item">3. Ich halte mich nicht für besonders fröhlich.</td>
+                           <td>
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="e3">
+                                </div>
+                           </td>
+                       </tr>
+                      
+                       <tr>
+                           <td class="item">4. Ich unterhalte mich wirklich gerne mit anderen Menschen.</td>
+                           <td>
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="e4">
+                                </div>
+                           </td>
+                       </tr>
+                       
+                       <tr>
+                           <td class="item">5. Ich bin gerne im Zentrum des Geschehens.</td>
+                           <td>
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="e5">
+                                </div>
+                           </td>
+                       </tr>
+                       
+                        <tr>
+                           <td></td>
+                           <td></td>
+                       </tr>
+                       
+                       <tr>
+                           <td><button class="button btn btn-default" type="submit" id="zurueck0" onclick='zurueck()'>Zurück</button></td>
+                           <td><button class="button2 btn btn-default" type="submit" id="weiter1" onclick='weiter()'>Weiter</button></td>
+                       </tr>
+                       
+                   </table>
+                  
+                </div>
+            </div>
+        </div>
+             
+        <div class="card " id="neurotizismus">
+            <div class="card-header">Neurotizismus</div>
+            <div class="card-block">
+               <div> 
+                  <span><p class="beschreibung">Neurotizismus sagt etwas über die Stärke und Häufigkeit der Reize aus, die benötigt werden, um von seinen Gefühlen beeindruckt zu werden. „Belastbare“ Menschen benötigen stärkere Reize und eine größere Anzahl, um aus dem Lot gebracht zu werden, „sensible“ Menschen sind recht empfindlich für Reize.</p></span>
+                   
+                  <hr>
+            
+                    <table>
+                        <tr>
+                           <td></td>
+                           <td><img src="nein.png" alt="" class="nein"> <img src="ja.png" alt="" class="ja"></td>
+                        </tr> 
+                        
+                       <tr>
+                           <td class="item">6. Ich bin nicht leicht beunruhigt.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="n1">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">7. Ich fühle mich anderen oft unterlegen.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="n2">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">8. Wenn ich unter starkem Stress stehe, fühle ich mich manchmal, als ob ich zusammenbräche.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="n3">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">9. Ich fühle mich selten einsam oder traurig.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="n4">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">10. Ich fühle mich oft angespannt oder nervös.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="n5">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td><button class="button btn btn-default" type="submit" id="zurueck1" onclick='zurueck()'>Zurück</button></td>
+                           <td><button class="button2 btn btn-default" type="submit" id="weiter2" onclick='weiter()'>Weiter</button></td>
+                       </tr>
+
+                   </table>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <div class="card " id="offenheit">
+            <div class="card-header">Offenheit für Erfahrung</div>
+            <div class="card-block">
+               <div> 
+                  <span><p class="beschreibung">Offenheit bezieht sich auf geistige Beweglichkeit, Kreativität und Neugier, auch intellektuellen Ehrgeiz.</p></span> 
+                   
+                  <hr>
+                   
+                 <table>
+                     <tr>
+                       <td></td>
+                       <td><img src="nein.png" alt="" class="nein"> <img src="ja.png" alt="" class="ja"></td>
+                    </tr> 
+                     
+                   <tr>
+                       <td class="item">11. Ich mag meine Zeit nicht mit Tagträumereien verschwenden.</td>
+                       <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="o1">
+                               </div></td>
+                   </tr>
+
+                   <tr>
+                       <td class="item">12. Ich finde philosophische Diskussionen langweilig.</td>
+                       <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="o2">
+                               </div></td>
+                   </tr>
+
+                   <tr>
+                       <td class="item">13. Mich begeistern die Motive, die ich in der Kunst und in der Natur finde.</td>
+                       <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="o3">
+                               </div></td>
+                   </tr>
+
+                   <tr>
+                       <td class="item">14. Ich probiere oft neue und fremde Speisen aus.</td>
+                       <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="o4">
+                               </div></td>
+                   </tr>
+
+                   <tr>
+                       <td class="item">15. Wenn ich Literatur lese oder ein Kunstwerk betrachte, empfinde ich manchmal ein Frösteln oder eine Welle der Begeisterung.</td>
+                       <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="o5">
+                               </div></td>
+                   </tr>
+
+                   <tr>
+                       <td><button class="button btn btn-default" type="submit" id="zurueck2" onclick='zurueck()'>Zurück</button></td>
+                       <td><button class="button2 btn btn-default2" type="submit" id="weiter3" onclick='weiter()'>Weiter</button></td>
+                   </tr>
+
+                </table>
+                   
+            </div>
+        </div>
+        </div>
+        <div class="card " id="vertraeglichkeit">
+            <div class="card-header">Verträglichkeit</div>
+            <div class="card-block">
+               <div> 
+                   <span><p class="beschreibung">Verträglichkeit bezeichnet ein Verhalten, das dazu neigt, anderen entgegenzukommen, Konfrontation zu vermeiden, sich anzupassen und um Konformität zu bemühen.</p></span>  
+                   
+                   <hr>
+                   
+                   <table>
+                       <tr>
+                           <td></td>
+                           <td><img src="nein.png" alt="" class="nein"> <img src="ja.png" alt="" class="ja"></td>
+                       </tr> 
+                       
+                       <tr>
+                           <td class="item">16. Ich versuche zu jedem, dem ich begegne, freundlich zu sein.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="v1">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">17. Ich bekomme häufiger Streit mit meiner Familie und meinen Kollegen.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="v2">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">18. Manche Leute halten mich für selbstsüchtig und selbstgefällig.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3"step="0.1"  class="slider" id="v3">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">19. Ich würde lieber mit anderen zusammenarbeiten, als mit ihnen zu wetteifern.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="v4">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">20. Die meisten Menschen, die ich kenne, mögen mich.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="v5">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td><button class="button btn btn-default" type="submit" id="zurueck3" onclick='zurueck()'>Zurück</button></td>
+                           <td><button class="button2 btn btn-default" type="submit" id="weiter4" onclick='weiter()'>Weiter</button></td>
+                       </tr>
+
+                </table>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <div class="card " id="gewissenhaftigkeit">
+            <div class="card-header">Gewissenhaftigkeit</div>
+            <div class="card-block">
+               <div> 
+                  <span><p class="beschreibung">Gewissenhaftigkeit bezieht sich darauf, wie eng sich jemand seinen Aufgaben und Zielen verpflichtet fühlt. Ein hohes Maß an Gewissenhaftigkeit kennzeichnet einen Menschen, der die Selbstdisziplin zeigt, die zur Zielerreichung notwendig ist und der zerstreuende Reize neutralisieren und kontrollieren kann.</p></span> 
+                   
+                   <hr>
+                   
+                   <table>
+                        <tr>
+                           <td></td>
+                           <td><img src="nein.png" alt="" class="nein"> <img src="ja.png" alt="" class="ja"></td>
+                       </tr> 
+                       
+                       <tr>
+                           <td class="item">21. Ich halte meine Sachen ordentlich und sauber.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="g1">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">22. Ich kann mit meine Zeit recht gut einteilen, so dass ich meine Angelegenheiten rechtzeitig beende.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="g2">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">23. Ich bin kein sehr systematisch vorgehender Mensch.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="g3">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">24. Ich versuche, alle mir übertragenen Aufgaben sehr gewissenhaft zu erledigen.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="g4">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td class="item">25. Ich habe eine Reihe von klaren Zielen und arbeite systematisch auf sie zu.</td>
+                           <td><div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="3" step="0.1" class="slider" id="g5">
+                               </div></td>
+                       </tr>
+
+                       <tr>
+                           <td><button class="button btn btn-default" type="submit" id="zurueck4" onclick='zurueck()'>Zurück</button></td>
+                           <td><button class="button2 btn btn-default" type="submit" id="submit" value="submit" onclick='init(),weiter()'>Abschicken</button></td>
+                       </tr>
+
+                </table>
+                   
+                </div>
+            </div>
+        </div>
+        
+            
+            <div class="card" id='ergebnisse'>
+            <div class="card-header">Ergebnisse</div>
+            <div class="card-block">
+                <p>Im Folgenden finden Sie Ihre Ergebnisse und wie Sie im Vergleich zur restlichen Population und den anderen Besuchern unserer Seite abgeschnitten haben. Ihre Ergebnisse können Sie sich für Ihre Unterlagen auch gerne ausdrucken.</p>
+                
+                <hr>
+                
+                <table id="results">
+                    
+                        <tr>
+                           <td></td>
+                           <td>Ihr Score</td>
+                            <td>Population-Score</td>
+                            <td>Standard-abweichung</td>
+                       </tr>
+                    
+                       <tr id="E-result">
+                           <td>Extraversion</td>
+                           <td id="e6"></td>
+                           <td>3.54</td>
+                           <td>.65</td>
+                       </tr>
+
+                       <tr id="N-result">
+                           <td>Neurotizismus</td>
+                           <td id="n6"></td>
+                           <td>2.63</td>
+                           <td>.58</td>
+                       </tr>
+
+                       <tr id="O-result">
+                           <td>Offenheit für Erfahrung</td>
+                           <td id="o6"></td>
+                           <td>3.57</td>
+                           <td>.53</td>
+                       </tr>
+
+                       <tr id="V-result">
+                           <td>Verträglichkeit</td>
+                           <td id="v6"></td>
+                           <td>3.65</td>
+                           <td>.46</td>
+                       </tr>
+
+                       <tr id="G-result">
+                           <td>Gewissenhaftigkeit</td>
+                           <td id="g6"></td>
+                           <td>3.81</td>
+                           <td>.46</td>
+                       </tr>
+
+                       <tr>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                       </tr>
+
+                </table>
+                
+                <br />
+                <br />
+                
+                <div class="chart-container" >
+                    <canvas id="myChart"></canvas>
+                </div>
+                
+                <br />
+                <br />
+                <h5>zur Erläuterung:</h5>
+                <p>Die Interpretation Ihres jeweiligen Scores ist abhängig von Populationsmittelwert (PM) und Standardabweichung (SA):</p>
+   
+                <table id="erklaerung">
+                        <tr>
+                           <td>stark unterdurchschnittlich</td>
+                           <td> 2 SA unter dem PM</td>
+                       </tr>
+                        <tr>
+                           <td>unterdurchschnittlich</td>
+                           <td> 1 SA unter dem PM</td>
+                       </tr>
+                        <tr>
+                           <td>unterdurchschnittlich</td>
+                           <td> +/- 1 SA innerhalb des PM</td>
+                       </tr>
+                        <tr>
+                           <td>überdurchschnittlich</td>
+                           <td> 1 SA über dem PM</td>
+                       </tr>
+                        <tr>
+                           <td>stark überdurchschnittlich</td>
+                           <td> 2 SA über dem PM</td>
+                       </tr>
+                </table>
+                
+                <br/>
+                <br/>
+                
+                <p id='eText'>Ihr Extraversions-Score ist </p>
+                <p id='nText'>Ihr Neurotizismus-Score ist </p>
+                <p id='oText'>Ihr Offenheits-Score ist </p>
+                <p id='vText'>Ihr Verträglichkeits-Score ist </p>
+                <p id='gText'>Ihr Gewissenhaftigkeits-Score ist </p>
+
+                <br />
+                <hr>
+                <p>Der Fragebogen funktioniert übrigens auch, wenn Ihre engen Freunde oder Verwandte Sie einschätzen. Probieren Sie es doch einmal!</p>
+
+                <br />
+                
+                <button class="button btn btn-default" type="submit" id="wiederholen" onclick='weiter()'>Test wiederholen</button>
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="card" id='feed'>
+            <div class="card-header">Weitere Informationen</div>
+            <div class="card-block">
+                <p>Wurde Ihr Interesse an psychologischen Themen geweckt? Falls ja, finden Sie hier interessante Informationen und Neuigkeiten rund um das Thema Psychologie:</p>   
+            </div>
+        </div>
+        </div>
+    </div>
+<script src="writeData.js"></script>
+<script src="readData.js"></script>   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.js"></script>
+<script src="projekt.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>     
+</body>
+</html>
+    

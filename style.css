@@ -1,0 +1,386 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 1001px) {
+    
+@font-face {
+    font-family: 'gandhi_sansregular';
+    src: url('GandhiSans-Regular-webfont.eot');
+    src: url('GandhiSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('GandhiSans-Regular-webfont.woff2') format('woff2'),
+         url('GandhiSans-Regular-webfont.woff') format('woff'),
+         url('GandhiSans-Regular-webfont.ttf') format('truetype'),
+         url('GandhiSans-Regular-webfont.svg#gandhi_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+}
+    
+     
+
+body{
+
+    font-family: gandhi_sansregular, arial, Helvetiva, 'sans serif';
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card{
+    border-width: 2px;
+    border-color: lightslategray;
+}
+
+.card-block{
+    padding: 25px;
+    
+}
+
+
+#extraversion, #E-result{
+    background-color: lightblue;
+}
+
+#neurotizismus, #N-result{
+    background-color: lightcoral;
+}
+
+#offenheit, #O-result{
+    background-color: lightgreen;
+}
+
+#vertraeglichkeit, #V-result{
+    background-color: lightgoldenrodyellow;
+}
+
+#gewissenhaftigkeit, #G-result{
+    background-color: lightsalmon;
+}
+
+#extraversion, #neurotizismus, #offenheit, #vertraeglichkeit, #gewissenhaftigkeit, #demograf, #ergebnisse, #feed{
+    display: none;
+}
+
+.card-header{
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+.beschreibung{
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.beschreibung:hover{
+    opacity: 1;
+    font-style: italic;
+}
+
+
+hr{
+    height: 0px; 
+    border-style: solid; 
+    border-color: black; 
+    border-width: 1px 0 0 0; 
+}
+
+
+#results td{
+    width:125px;
+    text-align:center;
+}
+
+#erklaerung{
+    background-color: lightblue;
+}
+
+#erklaerung td{
+    border-style: solid; 
+    border-color: black; 
+    border-width: 1px; 
+    width: 322px;
+    text-align: center;
+}
+
+.nein{
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
+}
+.ja{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    float: right;
+}
+.item {
+    width: 450px;
+    height: 60px;
+}
+
+.button{
+    margin-top: 20px;
+}
+
+.button2{
+    margin-top: 20px;
+    float: right;
+}
+
+#starten, #wiederholen{
+    position:relative;
+    margin: 0px -90px; 
+    left:50%;
+}
+
+#Alter{
+    width: 50px;
+}
+#demografie{
+    position:relative;
+    margin: -15px -150px -60px; 
+    left:50%;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 250px;/* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-left: 25px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background #4CAF50 */
+    cursor: pointer; /* Cursor on hover */
+}  
+    
+}
+
+
+
+
+
+/* Tablet (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 770px)
+and (max-width : 1000px) {
+    
+@font-face {
+    font-family: 'gandhi_sansregular';
+    src: url('GandhiSans-Regular-webfont.eot');
+    src: url('GandhiSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('GandhiSans-Regular-webfont.woff2') format('woff2'),
+         url('GandhiSans-Regular-webfont.woff') format('woff'),
+         url('GandhiSans-Regular-webfont.ttf') format('truetype'),
+         url('GandhiSans-Regular-webfont.svg#gandhi_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+}
+    
+
+body{
+
+    font-family: gandhi_sansregular, arial, Helvetiva, 'sans serif';
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card{
+    border-width: 2px;
+    border-color: lightslategray;
+}
+
+.card-block{
+    padding: 20px;
+    
+}
+
+
+#extraversion, #E-result{
+    background-color: lightblue;
+}
+
+#neurotizismus, #N-result{
+    background-color: lightcoral;
+}
+
+#offenheit, #O-result{
+    background-color: lightgreen;
+}
+
+#vertraeglichkeit, #V-result{
+    background-color: lightgoldenrodyellow;
+}
+
+#gewissenhaftigkeit, #G-result{
+    background-color: lightsalmon;
+}
+
+#extraversion, #neurotizismus, #offenheit, #vertraeglichkeit, #gewissenhaftigkeit, #demograf, #ergebnisse, #feed{
+    display: none;
+}
+
+.card-header{
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+.beschreibung{
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.beschreibung:hover{
+    opacity: 1;
+    font-style: italic;
+}
+
+
+hr{
+    height: 0px; 
+    border-style: solid; 
+    border-color: black; 
+    border-width: 1px 0 0 0; 
+}
+
+
+#results td{
+    width:95px;
+    text-align:center;
+}
+
+#erklaerung{
+    background-color: lightblue;
+}
+
+#erklaerung td{
+    border-style: solid; 
+    border-color: black; 
+    border-width: 1px; 
+    width: 322px;
+    text-align: center;
+}
+
+.nein{
+    width: 30px;
+    height: auto;
+    margin-left: 20px;
+}
+.ja{
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    float: right;
+}
+.item {
+    width: 340px;
+    height: 40px;
+}
+
+.button{
+    margin-top: 15px;
+}
+
+.button2{
+    margin-top: 15px;
+    float: right;
+}
+
+#starten, #wiederholen{
+    position:relative;
+    margin: 0px -90px; 
+    left:50%;
+}
+
+#Alter{
+    width: 45px;
+}
+#demografie{
+    position:relative;
+    margin: -15px -150px -60px; 
+    left:50%;
+}
+
+#myChart{
+    height:40vh; 
+    width:80vw;  
+    }
+    
+    
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 150px;/* Full-width */
+    height: 20px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin-left: 20px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background #4CAF50 */
+    cursor: pointer; /* Cursor on hover */
+} 
+    
+    
+}
