@@ -15,48 +15,6 @@ function alterGender(){
     alter = document.querySelector('#Alter').value*1;
 }
 
-
-function textVerfassen(){
-    
-    var su = "stark unterdurchschnittlich."; 
-    var u = "unterdurchschnittlich."; 
-    var d = "durchschnittlich."; 
-    var ue = "überdurchschnittlich."; 
-    var sue = "stark überdurchschnittlich."; 
-    
-    if(e6<=2.24){ document.querySelector('#eText').innerHTML = document.querySelector('#eText').innerHTML + su;  }
-    if(e6<=2.89 && e6>2.24){ document.querySelector('#eText').innerHTML = document.querySelector('#eText').innerHTML + u;}
-    if(e6>2.89 && e6<=4.19){ document.querySelector('#eText').innerHTML = document.querySelector('#eText').innerHTML + d;}
-    if(e6>4.19 && e6<=4.84){ document.querySelector('#eText').innerHTML = document.querySelector('#eText').innerHTML + ue;}
-    if(e6>4.84){ document.querySelector('#eText').innerHTML = document.querySelector('#eText').innerHTML + sue;}
-   
-    if(n6<=1.47){ document.querySelector('#nText').innerHTML = document.querySelector('#nText').innerHTML + su;}
-    if(n6<=2.05 && n6>1.47){ document.querySelector('#nText').innerHTML = document.querySelector('#nText').innerHTML + u;}
-    if(n6>2.05 && n6<=3.21){ document.querySelector('#nText').innerHTML = document.querySelector('#nText').innerHTML + d;}
-    if(n6>3.21 && n6<=3.79){ document.querySelector('#nText').innerHTML = document.querySelector('#nText').innerHTML + ue;}
-    if(n6>3.79){ document.querySelector('#nText').innerHTML = document.querySelector('#nText').innerHTML + sue;}
-    
-    if(o6<=2.51){ document.querySelector('#oText').innerHTML = document.querySelector('#oText').innerHTML + su;}
-    if(o6<=3.04 && o6>2.51){ document.querySelector('#oText').innerHTML = document.querySelector('#oText').innerHTML + u;}
-    if(o6>3.04 && o6<=4.1){ document.querySelector('#oText').innerHTML = document.querySelector('#oText').innerHTML + d;}
-    if(o6>4.1 && o6<=4.63){ document.querySelector('#oText').innerHTML = document.querySelector('#oText').innerHTML + ue;}
-    if(o6>4.63){ document.querySelector('#oText').innerHTML = document.querySelector('#oText').innerHTML + sue;}
-    
-    if(v6<=2.73){ document.querySelector('#vText').innerHTML = document.querySelector('#vText').innerHTML + su;}
-    if(v6<=3.19 && v6>2.73){ document.querySelector('#vText').innerHTML = document.querySelector('#vText').innerHTML + u;}
-    if(v6>3.19 && v6<=4.11){ document.querySelector('#vText').innerHTML = document.querySelector('#vText').innerHTML + d;}
-    if(v6>4.11 && v6<=4.57){ document.querySelector('#vText').innerHTML = document.querySelector('#vText').innerHTML + ue;}
-    if(v6>4.57){ document.querySelector('#vText').innerHTML = document.querySelector('#vText').innerHTML + sue;}
-    
-    if(g6<=2.89){ document.querySelector('#gText').innerHTML = document.querySelector('#gText').innerHTML + su;}
-    if(g6<=3.35 && g6>2.89){ document.querySelector('#gText').innerHTML = document.querySelector('#gText').innerHTML + u;}
-    if(g6>3.35 && g6<=4.27){ document.querySelector('#gText').innerHTML = document.querySelector('#gText').innerHTML + d;}
-    if(g6>4.27 && g6<=4.73){ document.querySelector('#gText').innerHTML = document.querySelector('#gText').innerHTML + ue;}
-    if(g6>4.73){ document.querySelector('#gText').innerHTML = document.querySelector('#gText').innerHTML + sue;}
-    
-}
-
-
 function setDefault(){
     document.querySelector('#Alter').value = "";
     

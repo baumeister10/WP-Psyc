@@ -72,20 +72,43 @@ function addTodosToPage() {
     document.getElementById("v6").innerHTML = d;  
     document.getElementById("g6").innerHTML = e; 
     
-    console.log(a);
+
+    if(a1<=2.24){document.getElementById("eText").innerHTML = "Ihr Extraversions-Score ist stark unterdurchschnittlich.";}
+    if((a1<2.89) && (a1>2.24)){document.getElementById("eText").innerHTML = "Ihr Extraversions-Score ist unterdurchschnittlich.";}
+    if(a1>2.89 && a1<=4.19){document.getElementById("eText").innerHTML = "Ihr Extraversions-Score ist durchschnittlich.";}
+    if(a1>4.19 && a1<=4.84){document.getElementById("eText").innerHTML = "Ihr Extraversions-Score ist überdurchschnittlich.";}
+    if(a1>4.84){document.getElementById("eText").innerHTML = "Ihr Extraversions-Score ist stark überdurchschnittlich.";}
     
-    document.getElementById("eText").innerHTML = "Ihr Extraversions-Score ist: " + a; 
-    document.getElementById("nText").innerHTML = "Ihr Neurotizismus-Score ist: " + b;  
-    document.getElementById("oText").innerHTML = "Ihr Offenheits-Score ist: " + c;  
-    document.getElementById("vText").innerHTML = "Ihr Verträglichkeits-Score ist: " + d;  
-    document.getElementById("gText").innerHTML = "Ihr Gewissenhaftigkeits-Score ist: " + e;  
+    if(b1<=1.47){document.getElementById("nText").innerHTML = "Ihr Neurotizismus-Score ist stark unterdurchschnittlich.";}
+    if((b1<2.05) && (b1>1.47)){document.getElementById("nText").innerHTML = "Ihr Neurotizismus-Score ist unterdurchschnittlich.";}
+    if(b1>2.05 && b1<=3.21){document.getElementById("nText").innerHTML = "Ihr Neurotizismus-Score ist durchschnittlich.";}
+    if(b1>3.21 && b1<=3.79){document.getElementById("nText").innerHTML = "Ihr Neurotizismus-Score ist überdurchschnittlich.";}
+    if(b1>3.79){document.getElementById("nText").innerHTML = "Ihr Neurotizismus-Score ist stark überdurchschnittlich.";}
     
+    if(c1<=2.51){document.getElementById("oText").innerHTML = "Ihr Offenheits-Score ist stark unterdurchschnittlich.";}
+    if((c1<3.04) && (c1>2.51)){document.getElementById("oText").innerHTML = "Ihr Offenheits-Score ist unterdurchschnittlich.";}
+    if(c1>3.04 && c1<=4.1){document.getElementById("oText").innerHTML = "Ihr Offenheits-Score ist durchschnittlich.";}
+    if(c1>4.1 && c1<=4.63){document.getElementById("oText").innerHTML = "Ihr Offenheits-Score ist überdurchschnittlich.";}
+    if(c1>4.63){document.getElementById("oText").innerHTML = "Ihr Offenheits-Score ist stark überdurchschnittlich.";}
     
+    if(d1<=2.73){document.getElementById("vText").innerHTML = "Ihr Verträglichkeits-Score ist stark unterdurchschnittlich.";}
+    if((d1<3.19) && (d1>2.73)){document.getElementById("vText").innerHTML = "Ihr Verträglichkeits-Score ist unterdurchschnittlich.";}
+    if(d1>3.19 && d1<=4.11){document.getElementById("vText").innerHTML = "Ihr Verträglichkeits-Score ist durchschnittlich.";}
+    if(d1>4.11 && d1<=4.57){document.getElementById("vText").innerHTML = "Ihr Verträglichkeits-Score ist überdurchschnittlich.";}
+    if(d1>4.57){document.getElementById("vText").innerHTML = "Ihr Verträglichkeits-Score ist stark überdurchschnittlich.";}
+    
+    if(e1<=2.89){document.getElementById("gText").innerHTML = "Ihr Gewissenhaftigkeits-Score ist stark unterdurchschnittlich.";}
+    if((e1<3.35) && (e1>2.89)){document.getElementById("gText").innerHTML = "Ihr Gewissenhaftigkeits-Score ist unterdurchschnittlich.";}
+    if(e1>3.35 && e1<=4.27){document.getElementById("gText").innerHTML = "Ihr Gewissenhaftigkeits-Score ist durchschnittlich.";}
+    if(e1>4.27 && e1<=4.73){document.getElementById("gText").innerHTML = "Ihr Gewissenhaftigkeits-Score ist überdurchschnittlich.";}
+    if(e1>4.73){document.getElementById("gText").innerHTML = "Ihr Gewissenhaftigkeits-Score ist stark überdurchschnittlich.";}
+     
+       
     //Chart.js mit Daten aus JSON-File
     new Chart(document.getElementById("myChart"), {
     type: 'line',
         data: {
-            labels: [1,2,3,4,5],
+            labels: ["Extraversion","Neurotizismus","Offenheit","Verträglichkeit","Gewissenhaftigkeit"],
             datasets: [{ 
         data: [3.54,2.63,3.57,3.65,3.81],
         label: "Populationsdurchschnitt",
